@@ -1,64 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Happy Valentine's Day ❤️</title>
 <style>
 body{
   margin:0;
   padding:0;
+  font-family: 'Poppins', sans-serif;
   text-align:center;
-  font-family: 'Arial';
-  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  background: linear-gradient(45deg,#ff4e50,#fc913a);
   color:white;
-}
-.container{
-  margin-top:50px;
+  overflow:hidden;
 }
 h1{
-  font-size:40px;
+  margin-top:60px;
+  font-size:45px;
+  animation: glow 2s infinite alternate;
 }
-p{
-  font-size:20px;
+@keyframes glow{
+  from {text-shadow:0 0 10px white;}
+  to {text-shadow:0 0 30px pink;}
 }
 button{
-  padding:12px 25px;
-  font-size:18px;
+  padding:15px 30px;
+  font-size:20px;
   border:none;
-  border-radius:25px;
+  border-radius:30px;
   background:white;
-  color:#ff4b6e;
+  color:#ff4e50;
   cursor:pointer;
   margin-top:20px;
+  transition:0.3s;
 }
 button:hover{
-  background:#ffe6ec;
+  transform:scale(1.1);
 }
-.hidden{
+#message{
   display:none;
-  font-size:22px;
-  margin-top:20px;
+  margin-top:30px;
+  font-size:25px;
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+.heart{
+  position:absolute;
+  color:white;
+  animation: float 6s linear infinite;
+}
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Happy Valentine's Day ❤️</h1>
-  <p>Dear Khushi,</p>
-  <p>You are the best thing that ever happened to me 💕</p>
-  <p>Every moment with you is special and magical ✨</p>
-  
-  <button onclick="showMessage()">Click if you love me 💌</button>
-  
-  <div id="surprise" class="hidden">
-    💍 Will you be my Valentine forever? ❤️
-  </div>
+<h1>Happy Valentine's Day My Love ❤️</h1>
+<p>You are my happiness, my forever, my everything 💕</p>
+
+<button onclick="showLove()">Click For Surprise 💌</button>
+
+<div id="message">
+  💍 Will You Be Mine Forever? ❤️<br><br>
+  I Love You So Much 😘
 </div>
 
+<audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
 <script>
-function showMessage(){
-  document.getElementById("surprise").style.display="block";
+function showLove(){
+  document.getElementById("message").style.display="block";
+  document.getElementById("music").play();
 }
+
+// Floating Hearts
+setInterval(function(){
+  var heart = document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(20+Math.random()*30)+"px";
+  document.body.appendChild(heart);
+  setTimeout(function(){
+    heart.remove();
+  },6000);
+},500);
 </script>
 
 </body>
