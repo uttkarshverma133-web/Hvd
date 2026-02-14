@@ -7,30 +7,33 @@
 body{
   margin:0;
   padding:0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   text-align:center;
-  background: linear-gradient(45deg,#ff4e50,#fc913a);
+  background: linear-gradient(45deg,#ff4e50,#ff6a88);
   color:white;
   overflow:hidden;
 }
 h1{
   margin-top:60px;
-  font-size:45px;
+  font-size:40px;
   animation: glow 2s infinite alternate;
 }
 @keyframes glow{
   from {text-shadow:0 0 10px white;}
-  to {text-shadow:0 0 30px pink;}
+  to {text-shadow:0 0 25px pink;}
+}
+p{
+  font-size:20px;
 }
 button{
-  padding:15px 30px;
-  font-size:20px;
+  padding:15px 25px;
+  font-size:18px;
   border:none;
   border-radius:30px;
   background:white;
   color:#ff4e50;
   cursor:pointer;
-  margin-top:20px;
+  margin:15px;
   transition:0.3s;
 }
 button:hover{
@@ -38,8 +41,8 @@ button:hover{
 }
 #message{
   display:none;
-  margin-top:30px;
-  font-size:25px;
+  margin-top:25px;
+  font-size:22px;
   animation: fadeIn 2s;
 }
 @keyframes fadeIn{
@@ -59,24 +62,35 @@ button:hover{
 </head>
 <body>
 
-<h1>Happy Valentine's Day My Love khushi ❤️</h1>
-<p>You are my happiness, my forever, my everything 💕</p>
+<h1>Happy Valentine's Day My Love ❤️</h1>
 
-<button onclick="showLove()">Click For Surprise 💌</button>
+<p>
+From the day you came into my life,  
+everything feels more beautiful 💕  
+You are my happiness, my peace, my forever.
+</p>
+
+<button onclick="showLove()">Click For A Surprise 💌</button>
 
 <div id="message">
-  💍 Will You Be Mine Forever? ❤️<br><br>
-  I Love You So Much 😘
+  💍 Will You Be Mine Forever? ❤️ <br><br>
+  No matter what happens,  
+  I will always choose you. 😘
 </div>
 
-<audio id="music" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-</audio>
+<br>
+
+<button onclick="window.open('https://www.youtube.com/results?search_query=Navjot+Ahuja+Khat')">
+  🎵 The Song That Reminds Me Of You - Khat ❤️
+</button>
+
+<p style="margin-top:20px; font-size:16px;">
+🎧 Put your earphones on and play our song…
+</p>
 
 <script>
 function showLove(){
   document.getElementById("message").style.display="block";
-  document.getElementById("music").play();
 }
 
 // Floating Hearts
