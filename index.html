@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Valentine's Day ❤️</title>
+<style>
+body{
+  margin:0;
+  padding:0;
+  text-align:center;
+  font-family: 'Arial';
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color:white;
+}
+.container{
+  margin-top:50px;
+}
+h1{
+  font-size:40px;
+}
+p{
+  font-size:20px;
+}
+button{
+  padding:12px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:25px;
+  background:white;
+  color:#ff4b6e;
+  cursor:pointer;
+  margin-top:20px;
+}
+button:hover{
+  background:#ffe6ec;
+}
+.hidden{
+  display:none;
+  font-size:22px;
+  margin-top:20px;
+}
+</style>
+</head>
+<body>
 
+<div class="container">
+  <h1>Happy Valentine's Day ❤️</h1>
+  <p>Dear Khushi,</p>
+  <p>You are the best thing that ever happened to me 💕</p>
+  <p>Every moment with you is special and magical ✨</p>
+  
+  <button onclick="showMessage()">Click if you love me 💌</button>
+  
+  <div id="surprise" class="hidden">
+    💍 Will you be my Valentine forever? ❤️
+  </div>
+</div>
+
+<script>
+function showMessage(){
+  document.getElementById("surprise").style.display="block";
+}
+</script>
+
+</body>
+</html>
